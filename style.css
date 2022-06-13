@@ -1,0 +1,141 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*--HEADER--*/
+
+header{
+    background-color: #262626;
+    padding: 2px 10px;
+}
+
+.logo img{
+    width: 80px;
+    border-radius: 50px;
+}
+
+.menu-nav ul{
+    list-style: none;
+}
+
+.menu a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu a:hover{
+    text-decoration: underline;
+}
+
+.menu li{
+    font-size: 16px;
+    padding: 15px 5px;
+}
+
+.menu li a{
+    display: block;
+}
+
+.button.second{
+    border-bottom: 1px  solid #8b0000 ;
+}
+
+/*--Mobile--*/
+
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle{
+    order: 1;
+}
+
+.item.button{
+    order: 2;
+}
+
+.item{
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none; 
+}
+
+.item.active{
+    display: block;
+}
+
+.toggle{
+    cursor: pointer;
+}
+
+.bars{
+    background: #f5f5f5;
+    display: inline-block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+}
+
+.bars::before,.bars::after{
+    background: #f5f5f5;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 18px;
+    position: absolute;
+}
+
+.bars::before{
+    top: 5px;
+}
+
+.bars::after{
+    top: -5px;
+}
+
+/*--Tablette--*/
+
+@media all and (min-width:468px){
+    .menu{
+        justify-content: center;
+    }
+
+    .logo{
+        flex: 1;
+    }
+    
+    .item.button{
+        width: auto;
+        order: 1;
+        display: block;
+    }
+
+    .toggle{
+        order: 2;
+    }
+
+    .button.second{
+        border: 0;
+    }
+
+    .button a{
+        padding: 8px 15px;
+        background: #8b0000;
+        border: 1px solid #ffef00;
+        border-radius: 50em;
+    }
+
+    .button.second a{
+        background: transparent;
+    }
+}
